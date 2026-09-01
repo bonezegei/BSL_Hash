@@ -1,0 +1,16 @@
+/*
+    Cryptographic Digest Hashes Example
+    Author: Jofel Batutay (Bonezegei)
+    Date: Sept 1, 2026
+*/
+
+include("lib/hash.bzg");
+
+var h = hash();
+var input = "Hello, Bonezegei!";
+
+print("MD5:    " + h.md5(input));
+print("SHA1:   " + h.sha1(input));
+print("SHA256: " + h.sha256(input));
+print("SHA-3:  " + h.sha3(input));
+print("SHA512: " + h.sha512(input));
