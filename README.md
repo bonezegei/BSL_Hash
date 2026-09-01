@@ -43,7 +43,7 @@ Example calculating checksums and non-cryptographic hashes for high-speed data p
 /*
     Non-Cryptographic Hashes Example
     Author: Jofel Batutay (Bonezegei)
-    Date: April 17, 2026
+    Date: Sept 1, 2026
 */
 
 include("lib/hash.bzg");
@@ -68,7 +68,7 @@ Example generating secure cryptographic hexadecimal digests from string inputs:
 /*
     Cryptographic Digest Hashes Example
     Author: Jofel Batutay (Bonezegei)
-    Date: April 17, 2026
+    Date: Sept 1, 2026
 */
 
 include("lib/hash.bzg");
@@ -93,7 +93,7 @@ A full test suite script demonstrating output verification across all supported 
 /*
     BSL_Hash Test Suite
     Author: Jofel Batutay (Bonezegei)
-    Date: April 17, 2026
+    Date: Sept 1, 2026
 */
 
 include("lib/hash.bzg");
@@ -149,10 +149,10 @@ check("SHA512:      " , h.sha512(input), "1c7e571d5f7eaf56af22af63b25d1812640d1a
 * **Website:** [bonezegei.com](https://bonezegei.com)
 
 ## Citation 
-[![DOI])
+[![DOI](https://zenodo.org/badge/1352961206.svg)](https://doi.org/10.5281/zenodo.22217630)
 
 If you use this library, please cite it as below:
 
 **APA Format:**
 
-Batutay, J. (2026). *bonezegei/BSL_Hash* [Computer software]. https://doi.org/
+Batutay, J. (2026). *bonezegei/BSL_Hash* [Computer software]. https://doi.org/10.5281/zenodo.22217630
