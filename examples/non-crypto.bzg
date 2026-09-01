@@ -1,1 +1,17 @@
+/*
+    Non-Cryptographic Hashes Example
+    Author: Jofel Batutay (Bonezegei)
+    Date: Sept 1, 2026
+*/
+
+include("lib/hash.bzg");
+
+var h = hash();
+var input = "Hello, Bonezegei!";
+
+print("CRC32:       " + h.crc32(input));
+print("Adler-32:    " + h.adler32(input));
+print("FNV-1a:      " + h.fnv1a(input));
+print("MurmurHash3: " + h.murmur3(input, 42)); // Input and Seed
+print("xxHash:      " + h.xxhash(input, 0));  // Input and Seed
 
