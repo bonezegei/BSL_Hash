@@ -1,0 +1,33 @@
+/*
+    BSL_Hash Test Suite
+    Author: Jofel Batutay (Bonezegei)
+    Date: Sept 1, 2026
+*/
+
+include("lib/hash.bzg");
+
+function check(label, actual, expected) {
+    if (actual === expected) {
+        print("PASS: "  + label + "  OUTPUT: " + actual);
+    } else {
+        print("FAIL: " + label + "  OUTPUT: " + actual);
+    }
+}
+
+var h = hash();
+
+var input = "Hello, Bonezegei!";
+
+print("--- Checksums & Non-Cryptographic Hashes ---");
+check("CRC32:       " , h.crc32(input), "ccccf7f8");
+check("Adler-32:    " , h.adler32(input), "35b905fa");
+check("FNV-1a:      " , h.fnv1a(input), "59673d46");
+check("MurmurHash3: " , h.murmur3(input, 42), "e95a8d40"); 
+check("xxHash:      " , h.xxhash(input, 0), "59eafb70");  
+
+print("\n--- Cryptographic Digest Hashes (Hex) ---");
+check("MD5:         " , h.md5(input), "1390f98482b7ebe2668fa8f64a55b71f");
+check("SHA1:        " , h.sha1(input), "bd46120f02cbe618411cbd70c0cfd37715014347");
+check("SHA256:      " , h.sha256(input), "67ea37441cb5523681dd7ae769d877ddf2d510af48a052d53dcb736c3b1e5387");
+check("SHA-3:       " , h.sha3(input), "206a1b8a0d0d8023622551786f1c4f1f5b99b92dcd6412212892d949749294ea");
+check("SHA512:      " , h.sha512(input), "1c7e571d5f7eaf56af22af63b25d1812640d1a3ea6f758a0fe70d41a485b28a14bfbb1aa0deb671937faeeb3398c6b91853a5f3d67680686a4d018b50ec2db6d");
